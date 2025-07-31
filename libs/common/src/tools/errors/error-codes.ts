@@ -1,0 +1,25 @@
+
+
+export enum ErrorCode {
+  USER_NOT_FOUND = 'USER_NOT_FOUND',
+  INVALID_CREDENTIALS = 'INVALID_CREDENTIALS',
+  UNAUTHORIZED_ACCESS = 'UNAUTHORIZED_ACCESS',
+  RESOURCE_NOT_FOUND = 'RESOURCE_NOT_FOUND',
+  INTERNAL_SERVER_ERROR = 'INTERNAL_SERVER_ERROR',
+  DUPLICATE = 'DUPLICATE',
+  VALIDATION_ERROR = 'VALIDATION_ERROR',
+  INTERNAL_ERROR = 'INTERNAL_ERROR',
+  FORBIDDEN = 'FORBIDDEN',
+}
+
+export enum ErrorMessage {
+  USER_NOT_FOUND = 'User not found',
+  INVALID_CREDENTIALS = 'Invalid credentials',
+  UNAUTHORIZED_ACCESS = 'Unauthorized access',
+  RESOURCE_NOT_FOUND = 'Resource not found',
+  INTERNAL_SERVER_ERROR = 'Internal server error',
+  DUPLICATE = 'Duplicate entry',
+  VALIDATION_ERROR = 'Validation error',
+  INTERNAL_ERROR = 'Internal error occurred',
+  FORBIDDEN = 'Forbidden access',
+}
