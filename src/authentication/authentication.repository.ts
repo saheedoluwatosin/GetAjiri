@@ -8,18 +8,19 @@ import { Model } from "mongoose";
 
 
 
-export class AuthenticationRepository extends AbstractRepository<User>{
+export class AuthenticationRepository extends AbstractRepository<User> {
     constructor(
         @InjectModel(User.name) 
         readonly userModel: Model<User>,
     ) {
         super(userModel);
     }
-    
 
-    // async findByPhoneNumber(phoneNumber: string): Promise<User | null> {
-    //     return this.userModel.findOne({ phoneNumber }).exec();
-    // }
-
+    async findByPhoneNumber(phoneNumber: string): Promise<User | null> {
+        return this.userModel.findOne({ phoneNumber }).exec();
+    }
     
+    async findById(id: string): Promise<User | null> {
+        return this.userModel.findById(this.convertToObjectId(id)).exec();
+    }
 }
